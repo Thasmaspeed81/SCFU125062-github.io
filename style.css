@@ -15,6 +15,7 @@ overflow-x:hidden;
 header{
 display:flex;
 justify-content:space-between;
+align-items:center;
 padding:20px;
 background:#3b5d3b;
 }
@@ -44,6 +45,7 @@ height:150px;
 border-radius:50%;
 margin-top:20px;
 object-fit:cover;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
 }
 
 /* Button */
@@ -57,7 +59,7 @@ border-radius:10px;
 cursor:pointer;
 }
 
-/* Cards */
+/* 3D Cards */
 .card-container{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -74,10 +76,44 @@ transition:0.4s;
 }
 
 .card:hover{
-transform:rotateY(15deg) scale(1.05);
+transform:rotateY(15deg) rotateX(10deg) scale(1.05);
+box-shadow:0 20px 40px rgba(0,0,0,0.4);
 }
 
-/* Dinos animation */
+/* Slider */
+.slider{
+width:320px;
+margin:auto;
+}
+
+.slide{
+display:none;
+width:100%;
+border-radius:10px;
+transition:0.5s;
+}
+
+.slide.active{
+display:block;
+}
+
+.slide:hover{
+transform:scale(1.05);
+}
+
+/* Buttons */
+.slider-buttons button{
+margin:10px;
+}
+
+/* Footer */
+footer{
+background:#3b5d3b;
+padding:20px;
+margin-top:40px;
+}
+
+/* Dino animation */
 .dino{
 position:fixed;
 font-size:30px;
